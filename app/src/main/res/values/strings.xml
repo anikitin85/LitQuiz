@@ -1,0 +1,26 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Who Said This</string>
+    <string name="pre">Question <xliff:g id="quantity" example="2">%d</xliff:g>/10. Who said this:</string>
+    <string name="quote1">Always forgive your enemies - nothing annoys them so much.</string>
+    <string name="quote2">Better pass boldly into that other world, in the full glory of some passion, than fade and wither dismally with age.</string>
+    <string name="quote3">Beauty is mysterious as well as terrible. God and devil are fighting there, and the battlefield is the heart of man.</string>
+    <string name="quote4">Don\'t bother just to be better than your contemporaries or predecessors. Try to be better than yourself.</string>
+    <string name="quote5">Happiness in intelligent people is the rarest thing I know.</string>
+    <string name="quote6">You cannot find peace by avoiding life.</string>
+    <string name="quote7">If you want to know what a man\'s like, take a good look at how he treats his inferiors, not his equals.</string>
+    <string name="quote8">Who controls the past controls the future. Who controls the present controls the past.</string>
+    <string name="quote9">Have a heart that never hardens, and a temper that never tires, and a touch that never hurts.</string>
+    <string name="quote10">Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them.</string>
+    <string name="name1">Oscar Wilde</string>
+    <string name="name2">James Joyce</string>
+    <string name="name3">Fyodor Dostoevsky</string>
+    <string name="name4">William Faulkner</string>
+    <string name="name5">Ernest Hemingway</string>
+    <string name="name6">Virginia Woolf</string>
+    <string name="name7">J.K. Rowling</string>
+    <string name="name8">George Orwell</string>
+    <string name="name9">Charles Dickens</string>
+    <string name="name10">William Shakespeare</string>
+    <string name="play_again">PLAY AGAIN</string>
+    <string name="show_answers">SHOW ANSWERS</string>
+</resources>
