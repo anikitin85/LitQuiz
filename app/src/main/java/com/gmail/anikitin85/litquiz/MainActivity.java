@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         answer4.setVisibility(View.GONE);
     }
 
+    // Display all quotes and their authors
     private void showAnswers() {
         String allAnswers = "";
         for (int i = 0; i < questions.length; i++) {
@@ -119,9 +120,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Check if a particular answer is already present in the array of answers
     private boolean isInArray(String option) {
         check = false;
-//        for (int i = 0; i < options.length; i++) {
-//            if (options[i].equals(option)) check = true;
-//        }
         for (String x : options) {
             if (x.equals(option)) check = true;
         }
