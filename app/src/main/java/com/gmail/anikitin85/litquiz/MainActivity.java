@@ -1,7 +1,5 @@
 package com.gmail.anikitin85.litquiz;
 
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -49,19 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setQuestion(0);
     }
 
-    public void init() {
-        if (Build.VERSION.SDK_INT >= 11) {
-            recreate();
-        } else {
-            Intent intent = getIntent();
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            finish();
-            overridePendingTransition(0, 0);
-            startActivity(intent);
-            overridePendingTransition(0, 0);
-        }
-    }
-
     private void setQuestion(int questionNumber) {
         String questionText = getString(R.string.pre, questionNumber + 1) + "\n\"" + questions[questionNumber] + "\"";
         question.setText(questionText);
@@ -76,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         String userAnswer = ((TextView) view).getText().toString();
         if (userAnswer.equals(getString(R.string.play_again))) {
-            init();
+            recreate();
         }
         if (userAnswer.equals(answers[currentQuestion])) {
             result++;
