@@ -11,10 +11,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int result, currentQuestion;
     String[] answers, questions, options;
     TextView question, answer1, answer2, answer3, answer4;
     boolean check;
+    float elevation;
+    private int result, currentQuestion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,10 +96,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showResults() {
+        elevation = answer1.getElevation();
         question.setText("RESULTS\nYou've got " + result + " out of " + questions.length + "!");
         answer1.setText(getString(R.string.play_again));
         answer2.setText(getString(R.string.show_answers));
-        answer2.setElevation(6);
+        answer2.setElevation(elevation);
         answer3.setVisibility(View.GONE);
         answer4.setVisibility(View.GONE);
     }
@@ -109,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             allAnswers += "\"" + questions[i] + "\"\n" + answers[i] + "\n\n";
         }
         question.setText(allAnswers);
-        answer1.setElevation(6);
+        answer1.setElevation(elevation);
         answer2.setVisibility(View.GONE);
     }
 
@@ -132,8 +134,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Check if a particular answer is already present in the array of answers
     private boolean isInArray(String option) {
         check = false;
-        for (int i = 0; i < options.length; i++) {
-            if (options[i].equals(option)) check = true;
+//        for (int i = 0; i < options.length; i++) {
+//            if (options[i].equals(option)) check = true;
+//        }
+        for (String x : options) {
+            if (x.equals(option)) check = true;
         }
         return check;
     }
